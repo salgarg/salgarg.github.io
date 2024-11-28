@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/salgarg-website/static/css/main.b1ab0a7b.css",
+    "main.js": "/salgarg-website/static/js/main.680cda1b.js",
+    "index.html": "/salgarg-website/index.html",
+    "main.b1ab0a7b.css.map": "/salgarg-website/static/css/main.b1ab0a7b.css.map",
+    "main.680cda1b.js.map": "/salgarg-website/static/js/main.680cda1b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1ab0a7b.css",
+    "static/js/main.680cda1b.js"
+  ]
+}
