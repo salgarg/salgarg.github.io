@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.4290ef42.css",
+    "main.css": "/static/css/main.a4c8a39f.css",
     "main.js": "/static/js/main.11b83547.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
-    "static/media/forest.jpeg": "/static/media/forest.6ad56340b743a3a77fe3.jpeg",
     "static/media/alaska2.JPG": "/static/media/alaska2.02152508fa26d31fb879.JPG",
     "static/media/alaska3.JPG": "/static/media/alaska3.6adedad0481e6e446721.JPG",
+    "static/media/homebg3.JPG": "/static/media/homebg3.e57e28b3972b5d3034cb.JPG",
     "static/media/alaska5.jpg": "/static/media/alaska5.2fe3a63a995d24007b5e.jpg",
     "static/media/alaska1.JPG": "/static/media/alaska1.95a5d0dc7eb3a9129250.JPG",
+    "static/media/alaska4.JPG": "/static/media/alaska4.21d8112c063ee5e8d643.JPG",
     "static/media/india3.JPG": "/static/media/india3.3b43f1a644cf8ca25aaa.JPG",
     "static/media/profile.png": "/static/media/profile.f48008f66e6f1ea91ccc.png",
     "static/media/india2.JPG": "/static/media/india2.6c353d8c3d69f402c645.JPG",
@@ -20,12 +21,12 @@
     "static/media/someonebook.jpg": "/static/media/someonebook.134acf79aa968393ff5a.jpg",
     "static/media/pre.svg": "/static/media/pre.1ccd5aeb893d3dbc636c.svg",
     "index.html": "/index.html",
-    "main.4290ef42.css.map": "/static/css/main.4290ef42.css.map",
+    "main.a4c8a39f.css.map": "/static/css/main.a4c8a39f.css.map",
     "main.11b83547.js.map": "/static/js/main.11b83547.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4290ef42.css",
+    "static/css/main.a4c8a39f.css",
     "static/js/main.11b83547.js"
   ]
 }
