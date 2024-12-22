@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0c8bf02c.css",
-    "main.js": "/static/js/main.9bddf1b5.js",
+    "main.js": "/static/js/main.14f61bcf.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/alaska2.JPG": "/static/media/alaska2.02152508fa26d31fb879.JPG",
     "static/media/alaska3.JPG": "/static/media/alaska3.6adedad0481e6e446721.JPG",
@@ -17,16 +17,16 @@
     "static/media/india1.JPG": "/static/media/india1.e5aee95fe4c2ee4bd656.JPG",
     "static/media/goddessbook.jpg": "/static/media/goddessbook.9c05fe79b0cbcd4899aa.jpg",
     "static/media/secrethistorybook.jpg": "/static/media/secrethistorybook.358b4a342db413f944f7.jpg",
-    "static/media/SaloniGarg_Resume_0922.pdf": "/static/media/SaloniGarg_Resume_0922.1fa35ced1267249ed54e.pdf",
+    "static/media/SaloniGarg_Resume_0922.redacted.pdf": "/static/media/SaloniGarg_Resume_0922.redacted.d235d5a2d54365ce3b86.pdf",
     "static/media/someonebook.jpg": "/static/media/someonebook.134acf79aa968393ff5a.jpg",
     "static/media/pre.svg": "/static/media/pre.1ccd5aeb893d3dbc636c.svg",
     "index.html": "/index.html",
     "main.0c8bf02c.css.map": "/static/css/main.0c8bf02c.css.map",
-    "main.9bddf1b5.js.map": "/static/js/main.9bddf1b5.js.map",
+    "main.14f61bcf.js.map": "/static/js/main.14f61bcf.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0c8bf02c.css",
-    "static/js/main.9bddf1b5.js"
+    "static/js/main.14f61bcf.js"
   ]
 }
