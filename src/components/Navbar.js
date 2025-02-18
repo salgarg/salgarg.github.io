@@ -5,13 +5,18 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
+import { CgBrush, CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiFillBook,
+  AiOutlineBook,
+  AiOutlineCamera,
+  AiOutlineFormatPainter,
+  AiOutlineCodepenCircle,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -72,7 +77,37 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/project"
+                to="/photography"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineCamera style={{ marginBottom: "2px" }} /> Photography
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/digitalartgallery"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFormatPainter style={{ marginBottom: "2px" }} /> Digital Art
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/bookshelf"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineBook style={{ marginBottom: "2px" }} /> Bookshelf
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/projects"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
@@ -91,6 +126,8 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
+
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

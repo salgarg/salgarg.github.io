@@ -1,20 +1,26 @@
 html {
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
+    rgba(99, 124, 101, 0.582),
+    rgba(58, 75, 59, 0.582)
   );
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    rgba(99, 124, 101, 0.582),
+    rgba(58, 75, 59, 0.582)
   );
 
-  --imp-text-color: #c770f0;
+  --hbg-image-gradient: linear-gradient(
+    to bottom left,
+    rgba(161, 177, 162, 0.582),
+    rgba(59, 81, 60, 0.582)
+  );
+
+  --imp-text-color: #c1d6c0;
 }
 
-.purple {
+.green {
   color: var(--imp-text-color) !important;
 }
 
@@ -32,7 +38,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #0c0513;
+  background-color: #152b1e;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -57,18 +63,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: #34593b;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: rgba(80, 139, 95, 0.959);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: rgba(80, 139, 95, 0.959);
   border-radius: 12px;
 }
 
@@ -76,9 +82,9 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: #0f250ea9 !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  box-shadow: 0px 10px 10px 0px rgba(80, 139, 95, 0.959) !important;
   backdrop-filter: blur(15px) !important;
 }
 
@@ -97,7 +103,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: #9ae2cf !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -144,7 +150,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background-color: #18271a !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -194,7 +200,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: #9ae2cf;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -257,15 +263,24 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/homebg2.JPG);
+  background-image: var(--hbg-image-gradient), url(./Assets/PhotographyPhotos/alaska4.JPG);
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
-  padding-top: 30px !important;
+  background-size: cover;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text horizontally */
 }
+
 
 .home-content {
   padding: 9rem 0 2rem !important;
+  justify-content: center;
   color: whitesmoke;
   text-align: left;
 }
@@ -281,17 +296,17 @@ button:focus {
 }
 
 .main-name {
-  color: #cd5ff8;
+  color: #fff;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  color: #fff !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #b562d6 !important;
+  color: #fff !important;
 }
 
 @media (max-width: 767px) {
@@ -319,8 +334,8 @@ button:focus {
 
 .home-about-section {
   position: relative;
-  padding-bottom: 70px !important;
-  padding-top: 70px !important;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
 }
 
 .home-about-description {
@@ -371,7 +386,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #68187a;
+  background: #1e3a20;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -379,13 +394,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  box-shadow: 0 0 15px #9ae2cf;
 }
 
 .home-social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
+  color: #9ae2cf;
+  box-shadow: 0 0 5px #256151;
+  text-shadow: 0 0 2px #256151;
 }
 
 .social-icons {
@@ -395,14 +410,14 @@ button:focus {
 }
 
 .icon-colour {
-  color: #700c86 !important;
+  color: #256151 !important;
 }
 
 /* --------- */
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  background-color: #151e17;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -439,7 +454,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #a588c0 !important;
+  color: #9ae2cf !important;
 }
 /* --------- */
 /* Projects */
@@ -460,17 +475,17 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
-  color: white !important;
+  box-shadow: 0 4px 5px 3px rgba(119, 169, 131, 0.959) !important;
+  color: rgb(255, 255, 255) !important;
   background-color: transparent !important;
-  opacity: 0.9 !important;
+  opacity: 1.2 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 4px 4px 5px rgba(80, 139, 95, 0.959) !important;
 }
 
 .blog-card {
@@ -483,7 +498,7 @@ button:focus {
 
 .blog-card-view {
   background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
+  box-shadow: 0 3px 3px 2px rgba(80, 139, 95, 0.959) !important;
   color: white !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
@@ -501,7 +516,7 @@ button:focus {
 .blog-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+  box-shadow: 0 3px 3px 5px rgba(80, 139, 95, 0.959) !important;
 }
 
 .card-img-top {
@@ -518,14 +533,14 @@ button:focus {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #623686 !important;
-  border-color: #623686 !important;
+  background-color: #5e9261 !important;
+  border-color: #5e9261 !important;
 }
 
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
+  background-color: #406d42 !important;
+  border-color: #406d42 !important;
 }
 .btn:focus {
   outline: none !important;
@@ -555,12 +570,12 @@ button:focus {
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  border: 1.7px solid rgba(143, 203, 158, 0.959) !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  box-shadow: 4px 5px 4px 3px rgba(143, 203, 158, 0.959) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
@@ -574,7 +589,7 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 2.2px solid rgba(80, 139, 95, 0.959) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
@@ -645,14 +660,14 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #8a49a8;
+  border-left: 2px solid #9ae2cf;
   position: relative;
 }
 
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: #5234795d;
+  background: #1e3a20;
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;
@@ -682,7 +697,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #8a49a8;
+  border: 2px solid #1e3a20;
 }
 
 .like-item {
@@ -692,8 +707,8 @@ button:focus {
 }
 
 .like-btn {
-  background-color: #934cce5e !important;
-  border-color: #934cce5e !important;
+  background-color: #9ae2cf !important;
+  border-color: #9ae2cf !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -702,8 +717,8 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #9ae2cf !important;
+  border-color: #9ae2cf !important;
 }
 
 .animate-like {
@@ -727,7 +742,7 @@ button:focus {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #934cce5e !important;
+  background-color: #9ae2cf !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
@@ -735,9 +750,162 @@ button:focus {
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #9ae2cf !important;
+  border-color: #9ae2cf !important;
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* --------- */
+/* Photography */
+/* --------- */
+
+/* General styling for the Photography page */
+.photography-container {
+  width: 100%;
+  height: 100vh; /* Make the container full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title styling (Check Out Some of My Photos!) */
+.coming-soon-title {
+  font-size: 2rem; /* Default font size */
+  color: var(--imp-text-color); /* Use your existing color variable */
+  margin-bottom: 30px; /* Space between title and images */
+  text-align: center; /* Ensure title is centered */
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.art-coming-soon-title {
+  font-size: 2rem; /* Default font size */
+  color: var(--imp-text-color); /* Use your existing color variable */
+  margin-bottom: 30px; /* Space between title and images */
+  text-align: center; /* Ensure title is centered */
+  line-height: 1.5;
+  padding: 10px;
+}
+
+/* Swiper container styling */
+.swiper {
+  width: 100%;
+  max-width: 1200px; /* Ensure the Swiper doesn't exceed a max width */
+  padding: 20px 0;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  width: 100%; /* Ensure full width */
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .coming-soon-title {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+    margin-bottom: 20px; /* Reduced margin for mobile */
+  }
+
+  .swiper-slide {
+    height: 200px; /* Smaller images on mobile */
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .coming-soon-title {
+    font-size: 2.5rem; /* Larger font size for desktops */
+    margin-bottom: 30px; /* Adjust space for larger screens */
+  }
+
+  .swiper-slide {
+    height: 400px; /* Larger images on desktop */
+  }
+}
+
+/* --------- */
+/* Bookshelf */
+/* --------- */
+
+
+/* Ensure the container takes up the full width of the page */
+.bookshelf {
+  width: 100%;
+  height: 100vh; /* Make the container full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Book row layout */
+.bookshelf .book-row {
+  display: flex;
+  justify-content: center; /* Center the books horizontally */
+  gap: 30px; /* Add space between books */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  max-width: 1200px; /* Set a max-width to prevent stretching on larger screens */
+  width: 100%; /* Take up the full width */
+  margin-top: 20px; /* Add space above the row */
+}
+
+/* Each book container */
+.bookshelf .book {
+  display: flex;
+  flex-direction: column; /* Stack title and image vertically */
+  align-items: center; /* Center the title and image */
+  max-width: 250px; /* Limit the width of each book */
+  flex: 1 1 auto; /* Allow flexible growth and shrinkage */
+  margin-bottom: 20px; /* Add space at the bottom */
+}
+
+.bookshelf .book img {
+  width: 100%; /* Make the image take up full width of the container */
+  height: 100%; /* Maintain the aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow effect */
+}
+
+.bookshelf .book h3 {
+  text-align: center;
+  margin-top: 10px; /* Space between image and title */
+  font-size: 1.2em;
+}
+
+.bookshelf .book-status-title {
+  font-size: 1.6rem;
+  color: #ffffff; 
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  /* Stack books vertically on smaller screens */
+  .bookshelf .book-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust width of each book container */
+  .bookshelf .book {
+    max-width: 90%; /* Books take up more width on small screens */
+  }
+
 }

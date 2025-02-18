@@ -6,8 +6,11 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import Photography from "./components/Photography/Photography";
+import Bookshelf from "./components/Bookshelf";
+import DigitalArtGallery from "./components/DigitalArt/DigitalArtGallery";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   Navigate
@@ -36,9 +39,12 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/photography" element={<Photography />} />
+          <Route path="/bookshelf" element={<Bookshelf />} />
+          <Route path="/digitalartgallery" element={<DigitalArtGallery />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

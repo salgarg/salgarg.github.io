@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/homebg3.JPG";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -15,7 +15,7 @@ function Home2() {
       <Container>
           <Col md={12} className="home-about-social">
             <p>
-              Feel free to <span className="purple">connect </span>with me on LinkedIn
+              Feel free to <span className="main-name">connect </span>with me on LinkedIn
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
