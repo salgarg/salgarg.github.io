@@ -1,9 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import alaska1 from "../../Assets/PhotographyPhotos/alaska1.JPG";
 import india1 from  "../../Assets/PhotographyPhotos/india1.JPG";
@@ -20,30 +21,31 @@ function Photography() {
     <div className="photography-container">
       <h2 className="coming-soon-title">Check Out Some of My Photos!</h2>
       <Swiper
-        modules={[EffectCoverflow, Navigation]}
+        modules={[EffectCoverflow, Navigation, Pagination]}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
         slidesPerView="auto"
         initialSlide={1}
         coverflowEffect={{
-          rotate: 50, // Rotate angle
-          stretch: 0, // Space between the cards
-          depth: 100, // Depth of the stack
+          rotate: 30,
+          stretch: 10,
+          depth: 100,
           modifier: 1,
-          slideShadows: true, // Enable shadows
+          slideShadows: true,
         }}
         navigation
+        pagination={{ clickable: true }}
         spaceBetween={30}
         breakpoints={{
           1200: {
-            slidesPerView: 3, // Show 3 slides on large screens
+            slidesPerView: 3,
           },
           768: {
-            slidesPerView: 2, // Show 2 slides on medium screens
+            slidesPerView: 2,
           },
           480: {
-            slidesPerView: 1, // Show 1 slide on small screens
+            slidesPerView: 1,
           },
         }}
       >
@@ -54,6 +56,7 @@ function Photography() {
               background: `url(${photo}) no-repeat center center/cover`,
               height: "300px",
               borderRadius: "10px",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             }}
           ></SwiperSlide>
         ))}

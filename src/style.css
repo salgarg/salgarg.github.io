@@ -200,7 +200,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #9ae2cf;
+  background: #1E3A20;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -262,11 +262,6 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
-  background-image: var(--hbg-image-gradient), url(./Assets/PhotographyPhotos/alaska4.JPG);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding-bottom: 30px;
   padding-top: 30px;
   width: 100vw;
@@ -275,8 +270,22 @@ button:focus {
   justify-content: center;
   align-items: center;
   text-align: center; /* Center text horizontally */
+  z-index: 1; /* Ensure content is above the pseudo-element */
 }
 
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--hbg-image-gradient), url(./Assets/PhotographyPhotos/alaska4.JPG);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; /* Place background behind the content */
+}
 
 .home-content {
   padding: 9rem 0 2rem !important;
@@ -769,8 +778,10 @@ button:focus {
   flex-direction: column;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  padding: 20px;
+  padding: 2rem;
   box-sizing: border-box;
+  position: relative; /* Added for potential absolute positioning of children */
+  --swiper-navigation-color: #1E3A20; /* Dark green for arrows */
 }
 
 /* Title styling (Check Out Some of My Photos!) */

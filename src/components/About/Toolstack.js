@@ -8,14 +8,13 @@ import {
   SiMacos,
   SiFigma,
   SiGoogledrive,
+  SiMixpanel,
 } from "react-icons/si";
+import { TbBrandMixpanel } from "react-icons/tb";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMacos />
-      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiFigma />
       </Col>
@@ -23,10 +22,13 @@ function Toolstack() {
         <SiSlack />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiGoogledrive />
+        <SiVisualstudiocode />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+        <SiMixpanel />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGoogledrive />
       </Col>
     </Row>
   );
