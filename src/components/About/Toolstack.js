@@ -9,6 +9,7 @@ import {
   SiFigma,
   SiGoogledrive,
   SiMixpanel,
+  SiDatadog,
 } from "react-icons/si";
 import { TbBrandMixpanel } from "react-icons/tb";
 
@@ -28,7 +29,7 @@ function Toolstack() {
         <SiMixpanel />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiGoogledrive />
+        <SiDatadog/>
       </Col>
     </Row>
   );
