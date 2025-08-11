@@ -525,7 +525,6 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 169, 131, 0.959) !important;
   color: rgb(255, 255, 255) !important;
   background-color: transparent !important;
   opacity: 1.2 !important;

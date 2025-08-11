@@ -8,7 +8,7 @@ function Projects() {
     <Container fluid className="project-section">
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="green">Projects </strong>
+          projects
         </h1>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
