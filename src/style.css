@@ -658,6 +658,10 @@ button:focus {
   padding-left: 1px !important;
 }
 
+.about-activity svg {
+  margin-right: 10px !important;
+}
+
 @media (max-width: 767px) {
   .about-img {
     padding-top: 0 !important;

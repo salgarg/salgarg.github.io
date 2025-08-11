@@ -1,17 +1,30 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
+import { CgBrush } from "react-icons/cg";
+import { ImBook, ImCamera, ImFolderOpen, ImHome, ImMug} from "react-icons/im";
+import {
+  AiFillStar,
+  AiOutlineHome,
+  AiOutlineFundProjectionScreen,
+  AiOutlineUser,
+  AiFillBook,
+  AiOutlineBook,
+  AiOutlineCamera,
+  AiOutlineFormatPainter,
+  AiOutlineCodepenCircle,
+  AiOutlineCoffee,
+} from "react-icons/ai";
 
 function AboutCard() {
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
+          <p style={{ textAlign: "left" }}>
             hello, i'm <span className="green">saloni garg! </span>
            <span className="green"> </span>
             <br />
-            I am currently a product manager at SeatGeek.
+            I am currently a Product Manager at SeatGeek.
             I graduated from the University of Illinois at Urbana-Champaign with a degree in computer engineering
             <br />
             <br />
@@ -19,19 +32,19 @@ function AboutCard() {
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> photography
+              <AiOutlineCamera /> photography
             </li>
             <li className="about-activity">
-              <ImPointRight /> coffee
+              <AiOutlineCoffee /> coffee
             </li>
             <li className="about-activity">
-              <ImPointRight /> trying new restaurants
+              <AiOutlineHome /> trying new restaurants
             </li>
             <li className="about-activity">
-              <ImPointRight /> digital art
+              <AiOutlineFormatPainter /> digital art
             </li>
             <li className="about-activity">
-              <ImPointRight /> reading
+              <AiOutlineBook /> reading
             </li>
           </ul>
         </blockquote>
