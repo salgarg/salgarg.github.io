@@ -9,15 +9,15 @@ function Bookshelf() {
     <Container className="bookshelf">
       <Row className="book-row">
         <div className="book">
-          <h3 className="book-status-title">Previous</h3>
+          <h3 className="book-status-title">previous</h3>
           <img src={previousCover} alt="Previous Book" />
         </div>
         <div className="book">
-          <h3 className="book-status-title">Now</h3>
+          <h3 className="book-status-title">now</h3>
           <img src={nowCover} alt="Now Reading" />
         </div>
         <div className="book">
-          <h3 className="book-status-title">Next</h3>
+          <h3 className="book-status-title">next</h3>
           <img src={nextCover} alt="Next Book" />
         </div>
       </Row>

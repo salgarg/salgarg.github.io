@@ -1,17 +1,10 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { CgBrush } from "react-icons/cg";
-import { ImBook, ImCamera, ImFolderOpen, ImHome, ImMug} from "react-icons/im";
 import {
-  AiFillStar,
   AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-  AiFillBook,
   AiOutlineBook,
   AiOutlineCamera,
   AiOutlineFormatPainter,
-  AiOutlineCodepenCircle,
   AiOutlineCoffee,
 } from "react-icons/ai";
 

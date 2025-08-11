@@ -1028,6 +1028,92 @@ button:focus {
   padding: 10px;
 }
 
+/* --------- */
+/* Password Protection */
+/* --------- */
+
+.password-section {
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.password-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(143, 203, 158, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 2rem !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  text-align: center !important;
+}
+
+.password-title {
+  color: white !important;
+  font-size: 1.8rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 500 !important;
+}
+
+.password-subtitle {
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 1rem !important;
+}
+
+.password-input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(143, 203, 158, 0.5) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  font-size: 1rem !important;
+}
+
+.password-input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.password-input:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--imp-text-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(143, 203, 158, 0.25) !important;
+  color: white !important;
+}
+
+.password-button {
+  background: linear-gradient(45deg, #8fcba2, #6ba383) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.password-button:hover:not(:disabled) {
+  background: linear-gradient(45deg, #7bb594, #5a8f71) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(143, 203, 158, 0.3) !important;
+}
+
+.password-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+.password-error {
+  color: #ff6b6b !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 1rem !important;
+  padding: 0.5rem !important;
+  background: rgba(255, 107, 107, 0.1) !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(255, 107, 107, 0.3) !important;
+}
+
 /* Swiper container styling */
 .swiper {
   width: 100%;
