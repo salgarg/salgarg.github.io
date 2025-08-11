@@ -13,7 +13,6 @@
     "react-pdf": "^5.7.1",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.0",
-    "react-tsparticles": "^1.42.2",
     "swiper": "^11.1.15",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"

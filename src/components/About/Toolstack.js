@@ -10,26 +10,30 @@ import {
   SiGoogledrive,
   SiMixpanel,
   SiDatadog,
+  SiLooker,
 } from "react-icons/si";
 import { TbBrandMixpanel } from "react-icons/tb";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
+      <Col xs={6} md={3} className="tech-icons">
         <SiFigma />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      <Col xs={6} md={3} className="tech-icons">
         <SiSlack />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      <Col xs={6} md={3} className="tech-icons">
         <SiVisualstudiocode />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      <Col xs={6} md={3} className="tech-icons">
         <SiMixpanel />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      <Col xs={6} md={3} className="tech-icons">
         <SiDatadog/>
+      </Col>
+      <Col xs={6} md={3} className="tech-icons">
+        <SiLooker/>
       </Col>
     </Row>
   );

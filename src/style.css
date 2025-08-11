@@ -264,7 +264,7 @@ button:focus {
 /* --------- */
 .wave {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
+  animation-duration: 3s; /* Change to speed up or slow down */
   animation-iteration-count: infinite; /* Never stop waving :) */
   transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
   display: inline-block;
@@ -296,13 +296,6 @@ button:focus {
     transform: rotate(0deg);
   }
 }
-#tsparticles {
-  position: fixed !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  width: 100%;
-  height: 100%;
-}
 
 .home-header {
   padding-top: 80px !important;
@@ -328,7 +321,7 @@ button:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: var(--hbg-image-gradient), url(./Assets/PhotographyPhotos/alaska4.JPG);
+  /* background-image: var(--hbg-image-gradient), url(./Assets/PhotographyPhotos/alaska4.JPG); */
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -349,7 +342,7 @@ button:focus {
 
 .heading-name {
   font-size: 2.5em !important;
-  padding-left: 45px !important;
+  padding-left: 50px !important;
 }
 
 .main-name {
@@ -359,7 +352,7 @@ button:focus {
 .Typewriter__wrapper {
   font-size: 2.2em !important;
   color: #fff !important;
-  font-weight: 600 !important;
+  font-weight: 300 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
@@ -431,7 +424,7 @@ button:focus {
   font-size: 1.2em !important;
   line-height: 2em !important;
   background: rgba(255, 255, 255, 0.972) !important;
-  border-radius: 50% !important;
+
   transition: 0.5s !important;
 }
 
@@ -623,30 +616,30 @@ button:focus {
 }
 
 .tech-icons {
-  font-size: 4.5em !important;
-  margin: 15px !important;
-  padding: 10px !important;
+  font-size: 2.8em !important;
+  margin: 8px !important;
+  padding: 8px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(143, 203, 158, 0.959) !important;
+  border: 1.2px solid rgba(143, 203, 158, 0.959) !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(143, 203, 158, 0.959) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
 
 @media (max-width: 767px) {
   .tech-icons {
-    margin: 10px !important;
+    margin: 6px !important;
+    font-size: 2.2em !important;
   }
 }
 
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(80, 139, 95, 0.959) !important;
+  border: 1.5px solid rgba(80, 139, 95, 0.959) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
