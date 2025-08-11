@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.33c17f1f.css",
-    "main.js": "/static/js/main.468560c0.js",
-    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
+    "main.css": "/static/css/main.a142e85d.css",
+    "main.js": "/static/js/main.2bcd5868.js",
     "static/media/alaska2.JPG": "/static/media/alaska2.02152508fa26d31fb879.JPG",
     "static/media/alaska3.JPG": "/static/media/alaska3.6adedad0481e6e446721.JPG",
     "static/media/homebg3.JPG": "/static/media/homebg3.e57e28b3972b5d3034cb.JPG",
@@ -10,12 +9,17 @@
     "static/media/alaska1.JPG": "/static/media/alaska1.95a5d0dc7eb3a9129250.JPG",
     "static/media/alaska4.JPG": "/static/media/alaska4.21d8112c063ee5e8d643.JPG",
     "static/media/india3.JPG": "/static/media/india3.3b43f1a644cf8ca25aaa.JPG",
+    "static/media/DSC01194.JPG": "/static/media/DSC01194.b9adc02e0ccc47246e74.JPG",
+    "static/media/DSC01546.JPG": "/static/media/DSC01546.de8c4a7fdd1d99ffe1b0.JPG",
+    "static/media/DSC00851.JPG": "/static/media/DSC00851.c5c7cde3e50a03013ac4.JPG",
     "static/media/profile.png": "/static/media/profile.f48008f66e6f1ea91ccc.png",
+    "static/media/DSC00889 (1).JPG": "/static/media/DSC00889 (1).273b62f142967ef5158d.JPG",
     "static/media/IMG_0205.PNG": "/static/media/IMG_0205.73656080e45c134077b7.PNG",
     "static/media/india2.JPG": "/static/media/india2.6c353d8c3d69f402c645.JPG",
     "static/media/IMG_0209.PNG": "/static/media/IMG_0209.7003838a0b704b9aae95.PNG",
     "static/media/boot.png": "/static/media/boot.2cb5c8cda6c2372d7fad.png",
     "static/media/about.jpeg": "/static/media/about.7352f867fbcacbc27ec7.jpeg",
+    "static/media/DSC01376.JPG": "/static/media/DSC01376.5528ef9311f51a1dbc73.JPG",
     "static/media/IMG_0216.PNG": "/static/media/IMG_0216.b4adfda8c1e6e99a5983.PNG",
     "static/media/IMG_0203.PNG": "/static/media/IMG_0203.0d61d0afdf01429be938.PNG",
     "static/media/india1.JPG": "/static/media/india1.e5aee95fe4c2ee4bd656.JPG",
@@ -27,16 +31,15 @@
     "static/media/IMG_0199.PNG": "/static/media/IMG_0199.24981606deddaf302588.PNG",
     "static/media/SaloniGarg_Resume_0525_redacted.pdf": "/static/media/SaloniGarg_Resume_0525_redacted.78cd6308bf13fbe083fc.pdf",
     "static/media/yellowface.jpg": "/static/media/yellowface.759939431ae99139b527.jpg",
+    "static/media/exceptional.jpg": "/static/media/exceptional.9fa01381d431d2b9f71a.jpg",
     "static/media/daisyjones.jpg": "/static/media/daisyjones.810b1c9d1189885488bc.jpg",
-    "static/media/siddhartha.jpg": "/static/media/siddhartha.2a852cb238490bc8a743.jpg",
     "static/media/pre.svg": "/static/media/pre.1ccd5aeb893d3dbc636c.svg",
     "index.html": "/index.html",
-    "main.33c17f1f.css.map": "/static/css/main.33c17f1f.css.map",
-    "main.468560c0.js.map": "/static/js/main.468560c0.js.map",
-    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+    "main.a142e85d.css.map": "/static/css/main.a142e85d.css.map",
+    "main.2bcd5868.js.map": "/static/js/main.2bcd5868.js.map"
   },
   "entrypoints": [
-    "static/css/main.33c17f1f.css",
-    "static/js/main.468560c0.js"
+    "static/css/main.a142e85d.css",
+    "static/js/main.2bcd5868.js"
   ]
 }
