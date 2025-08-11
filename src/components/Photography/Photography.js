@@ -1,67 +1,51 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-import alaska1 from "../../Assets/PhotographyPhotos/alaska1.JPG";
-import india1 from  "../../Assets/PhotographyPhotos/india1.JPG";
-import alaska2 from "../../Assets/PhotographyPhotos/alaska2.JPG";
-import india2 from "../../Assets/PhotographyPhotos/india2.JPG";
-import alaska3 from "../../Assets/PhotographyPhotos/alaska3.JPG";
-import india3 from "../../Assets/PhotographyPhotos/india3.JPG";
-import alaska5 from "../../Assets/PhotographyPhotos/alaska5.jpg";
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 
 function Photography() {
-  const photos = [alaska1,india1,alaska2,india2,alaska3,india3,alaska5];
+  const [photos, setPhotos] = useState([]);
+
+  useEffect(() => {
+    const importAll = (r) => {
+      let images = {};
+      r.keys().map((item) => {
+        images[item.replace('./', '')] = r(item);
+      });
+      return images;
+    };
+
+    const shuffleArray = (array) => {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    };
+
+    const images = importAll(
+      require.context('../../Assets/PhotographyPhotos', false, /\.(png|jpe?g|JPG)$/)
+    );
+    
+    const photoEntries = Object.entries(images);
+    const shuffledPhotos = shuffleArray(photoEntries);
+    setPhotos(shuffledPhotos);
+  }, []);
 
   return (
-    <div className="photography-container">
-      <h2 className="coming-soon-title">Check Out Some of My Photos!</h2>
-      <Swiper
-        modules={[EffectCoverflow, Navigation, Pagination]}
-        effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView="auto"
-        initialSlide={1}
-        coverflowEffect={{
-          rotate: 30,
-          stretch: 10,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        navigation
-        pagination={{ clickable: true }}
-        spaceBetween={30}
-        breakpoints={{
-          1200: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          480: {
-            slidesPerView: 1,
-          },
-        }}
-      >
-        {photos.map((photo, index) => (
-          <SwiperSlide
-            key={index}
-            style={{
-              background: `url(${photo}) no-repeat center center/cover`,
-              height: "300px",
-              borderRadius: "10px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            }}
-          ></SwiperSlide>
+    <Container fluid className="photography-container">
+      <div className="photo-grid">
+        {photos.map(([, src], index) => (
+          <div key={index} className="photo-item">
+            <img 
+              src={src.default || src} 
+              alt={`Photography ${index + 1}`}
+              className="photo-image"
+              loading="lazy"
+            />
+          </div>
         ))}
-      </Swiper>
-    </div>
+      </div>
+    </Container>
   );
 }
 

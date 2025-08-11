@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import previousCover from "../Assets/Books/siddhartha.jpg";
-import nowCover from "../Assets/Books/daisyjones.jpg";
+import previousCover from "../Assets/Books/daisyjones.jpg";
+import nowCover from "../Assets/Books/exceptional.jpg"; // You'll need to add this image
 import nextCover from "../Assets/Books/yellowface.jpg";
 
 function Bookshelf() {

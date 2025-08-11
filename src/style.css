@@ -146,14 +146,37 @@ button:focus {
   opacity: 0.9 !important;
 }
 
+/* Responsive breakpoints for navbar */
+@media (max-width: 991px) {
+  .navbar {
+    font-size: 1.1rem !important;
+    padding: 0.25rem 1.5rem !important;
+  }
+}
+
 @media (max-width: 767px) {
   .navbar {
-    padding: 1rem 2rem !important;
-    font-size: 1.4rem !important;
+    padding: 0.5rem 1.5rem !important;
+    font-size: 1rem !important;
     background-color: #18271a !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
+  }
+  
+  .navbar-brand header {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.3rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .navbar-brand header {
+    font-size: 1.4rem !important;
   }
 }
 .navbar-brand {
@@ -178,6 +201,31 @@ button:focus {
 @media (max-width: 767px) {
   .nav-link {
     padding: 0.7rem 1rem !important;
+  }
+  
+  /* Mobile dropdown menu styling */
+  .navbar-collapse {
+    background-color: rgba(24, 39, 26, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 8px !important;
+    margin-top: 10px !important;
+    padding: 10px !important;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 12px 20px !important;
+    border-bottom: 1px solid rgba(154, 226, 207, 0.2) !important;
+    margin: 2px 0 !important;
+    border-radius: 4px !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(154, 226, 207, 0.1) !important;
   }
 }
 
@@ -773,25 +821,206 @@ button:focus {
 /* General styling for the Photography page */
 .photography-container {
   width: 100%;
-  height: 100vh; /* Make the container full height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  padding: 2rem;
+  min-height: 100vh;
+  padding: 6rem 2rem 2rem 2rem;
   box-sizing: border-box;
-  position: relative; /* Added for potential absolute positioning of children */
-  --swiper-navigation-color: #1E3A20; /* Dark green for arrows */
 }
 
-/* Title styling (Check Out Some of My Photos!) */
-.coming-soon-title {
-  font-size: 2rem; /* Default font size */
-  color: var(--imp-text-color); /* Use your existing color variable */
-  margin-bottom: 30px; /* Space between title and images */
-  text-align: center; /* Ensure title is centered */
+/* Title styling */
+.photography-title {
+  font-size: 2rem;
+  color: var(--imp-text-color);
+  margin-bottom: 30px;
+  text-align: center;
   line-height: 1.5;
   padding: 10px;
+}
+
+/* Photo Grid Layout - Responsive Masonry Style */
+.photography-container .photo-grid {
+  column-count: 4;
+  column-gap: 12px;
+  padding: 20px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.photo-item {
+  position: relative;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  border: 1px solid rgba(24, 24, 24, 0.02);
+  transition: transform 0.3s ease;
+  animation: slideInFromBottom 1s ease-in-out;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 12px;
+  break-inside: avoid;
+}
+
+.photo-item:hover {
+  transform: scale(1.03);
+}
+
+.photo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .photography-container .photo-grid {
+    column-count: 3;
+    column-gap: 10px;
+  }
+  
+  .photography-container .photo-item {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .photography-container .photo-grid {
+    column-count: 2;
+    column-gap: 8px;
+  }
+  
+  .photography-container .photo-item {
+    margin-bottom: 8px;
+  }
+  
+  .photography-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photography-container .photo-grid {
+    column-count: 2;
+    column-gap: 6px;
+  }
+  
+  .photography-container .photo-item {
+    margin-bottom: 6px;
+  }
+  
+  .photography-container {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+}
+
+/* --------- */
+/* Digital Art Gallery */
+/* --------- */
+
+/* General styling for the Digital Art page */
+.digitalart-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Title styling */
+.digitalart-title {
+  font-size: 2rem;
+  color: var(--imp-text-color);
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+/* Art Grid Layout - Responsive Masonry Style */
+.digitalart-container .art-grid {
+  column-count: 4;
+  column-gap: 12px;
+  padding: 20px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.art-item {
+  position: relative;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  border: 1px solid rgba(24, 24, 24, 0.02);
+  transition: transform 0.3s ease;
+  animation: slideInFromBottom 1s ease-in-out;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 12px;
+  break-inside: avoid;
+}
+
+.art-item:hover {
+  transform: scale(1.03);
+}
+
+.art-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Design for Digital Art */
+@media (max-width: 1200px) {
+  .digitalart-container .art-grid {
+    column-count: 3;
+    column-gap: 10px;
+  }
+  
+  .digitalart-container .art-item {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .digitalart-container .art-grid {
+    column-count: 2;
+    column-gap: 8px;
+  }
+  
+  .digitalart-container .art-item {
+    margin-bottom: 8px;
+  }
+  
+  .digitalart-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .digitalart-container .art-grid {
+    column-count: 2;
+    column-gap: 6px;
+  }
+  
+  .digitalart-container .art-item {
+    margin-bottom: 6px;
+  }
+  
+  .digitalart-container {
+    padding: 3rem 1rem 1rem 1rem;
+  }
 }
 
 .art-coming-soon-title {

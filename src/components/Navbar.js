@@ -39,7 +39,7 @@ function NavBar() {
     <Navbar
       expanded={expand}
       fixed="top"
-      expand="md"
+      expand="lg"
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
@@ -90,7 +90,7 @@ function NavBar() {
                 to="/digitalartgallery"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFormatPainter style={{ marginBottom: "2px" }} /> Digital Art
+                <AiOutlineFormatPainter style={{ marginBottom: "2px" }} /> Art
               </Nav.Link>
             </Nav.Item>
 
