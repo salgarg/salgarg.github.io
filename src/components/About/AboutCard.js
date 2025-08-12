@@ -22,8 +22,7 @@ function AboutCard() {
             <br />
             <br />
             Apart from being a PM, I'm into...
-          </p>
-          <ul>
+            <br /><br />
             <li className="about-activity">
               <AiOutlineCamera /> photography
             </li>
@@ -39,7 +38,8 @@ function AboutCard() {
             <li className="about-activity">
               <AiOutlineBook /> reading
             </li>
-          </ul>
+ 
+          </p>
         </blockquote>
       </Card.Body>
     </Card>

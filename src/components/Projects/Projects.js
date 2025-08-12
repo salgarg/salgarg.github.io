@@ -13,7 +13,7 @@ function Projects() {
           <h1 className="project-heading">
             projects
           </h1>
-          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Row style={{ justifyContent: "center", paddingBottom: "15px" }}>
 
             <Col md={4} className="project-card">
               <ProjectCard
