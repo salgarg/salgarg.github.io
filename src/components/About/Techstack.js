@@ -23,22 +23,22 @@ import { TbBrandGolang } from "react-icons/tb";
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={6} md={3} className="tech-icons">
+      <Col xs={4} sm={4} md={3} className="tech-icons">
         <CgCPlusPlus />
       </Col>
-      <Col xs={6} md={3} className="tech-icons">
+      <Col xs={4} sm={4} md={3} className="tech-icons">
         <DiJavascript1 />
       </Col>
-      <Col xs={6} md={3} className="tech-icons">
+      <Col xs={4} sm={4} md={3} className="tech-icons">
         <DiReact />
       </Col>
-      <Col xs={6} md={3} className="tech-icons">
+      <Col xs={4} sm={4} md={3} className="tech-icons">
         <SiMysql />
       </Col>
-      <Col xs={6} md={3} className="tech-icons">
+      <Col xs={4} sm={4} md={3} className="tech-icons">
         <DiPython />
       </Col>
-      <Col xs={6} md={3} className="tech-icons">
+      <Col xs={4} sm={4} md={3} className="tech-icons">
         <DiJava />
       </Col>
     </Row>
