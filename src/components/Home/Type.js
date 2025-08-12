@@ -8,12 +8,15 @@ function Type() {
         strings: [
           "product manager",
           "computer engineer",
-          "creative"
+          "creative",
+          "photographer"
         ],
         autoStart: true,
         loop: true,
         typeSpeed: 90,
         deleteSpeed: 95,
+        wrapperClassName: "typewriter",
+        cursorClassName: "typewriter-cursor"
       }}
     />
   );

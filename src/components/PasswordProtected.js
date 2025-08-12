@@ -27,7 +27,7 @@ function PasswordProtected({ children, correctPassword = "saloniresume29" }) {
         <Row className="justify-content-center align-items-center min-vh-100">
           <Col md={6} lg={4}>
             <div className="password-card">
-              <p className="password-subtitle">enter password</p>
+              <p className="password-subtitle">enter password to view my resume</p>
               
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">

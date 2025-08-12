@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
+import SidebarNav from "../SidebarNav";
 
 function Photography() {
   const [photos, setPhotos] = useState([]);
@@ -32,7 +33,9 @@ function Photography() {
   }, []);
 
   return (
-    <Container fluid className="photography-container">
+    <>
+      <SidebarNav />
+      <Container fluid className="photography-container">
       <div className="photo-grid">
         {photos.map(([, src], index) => (
           <div key={index} className="photo-item">
@@ -46,6 +49,7 @@ function Photography() {
         ))}
       </div>
     </Container>
+    </>
   );
 }
 

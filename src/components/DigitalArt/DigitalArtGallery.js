@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
+import SidebarNav from "../SidebarNav";
 
 function DigitalArtGallery() {
   const [artworks, setArtworks] = useState([]);
@@ -32,20 +33,23 @@ function DigitalArtGallery() {
   }, []);
 
   return (
-    <Container fluid className="digitalart-container">
-      <div className="art-grid">
-        {artworks.map(([, src], index) => (
-          <div key={index} className="art-item">
-            <img 
-              src={src.default || src} 
-              alt={`Digital Art ${index + 1}`}
-              className="art-image"
-              loading="lazy"
-            />
-          </div>
-        ))}
-      </div>
-    </Container>
+    <>
+      <SidebarNav />
+      <Container fluid className="digitalart-container">
+        <div className="art-grid">
+          {artworks.map(([, src], index) => (
+            <div key={index} className="art-item">
+              <img 
+                src={src.default || src} 
+                alt={`Digital Art ${index + 1}`}
+                className="art-image"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </Container>
+    </>
   );
 }
 

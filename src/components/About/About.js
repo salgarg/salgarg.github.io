@@ -6,10 +6,13 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import aboutImg from "../../Assets/about.jpeg";
 import Toolstack from "./Toolstack";
+import SidebarNav from "../SidebarNav";
 
 function About() {
   return (
-    <Container fluid className="about-section">
+    <>
+      <SidebarNav />
+      <Container fluid className="about-section">
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
@@ -56,6 +59,7 @@ function About() {
         <Github />
       </Container>
     </Container>
+    </>
   );
 }
 

@@ -28,6 +28,7 @@ button:focus {
   box-shadow: none !important;
 }
 
+
 /* --------- */
 /*  Preloader */
 /* --------- */
@@ -38,7 +39,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #152b1e;
+  background-color: #002107;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -258,6 +259,18 @@ button:focus {
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
 }
+/* --- SG header --- */
+.sg-header {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  z-index: 1000;
+}
+
+
 
 /* --------- */
 /* Home section */
@@ -297,20 +310,14 @@ button:focus {
   }
 }
 
-.home-header {
-  padding-top: 80px !important;
-}
-
 .home-section {
   position: relative;
   padding-bottom: 30px;
-  padding-top: 30px;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Center text horizontally */
   z-index: 1; /* Ensure content is above the pseudo-element */
 }
 
@@ -329,57 +336,384 @@ button:focus {
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
-  justify-content: center;
+  padding-top: 9rem !important;
+  padding-bottom: 2rem !important;
   color: whitesmoke;
   text-align: left;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.heading {
-  font-size: 2.4em !important;
-  padding-left: 50px !important;
+.home-inner {
+  width: fit-content;
+  max-width: 900px;
+  margin: 0 auto !important;
+  padding: 0 1rem;
 }
 
-.heading-name {
-  font-size: 2.5em !important;
-  padding-left: 50px !important;
+/* Responsive padding for home-inner */
+@media (min-width: 576px) {
+  .home-inner {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-inner {
+    padding: 0 3rem;
+  }
+}
+
+/* Home navigation links - responsive icon styling for all breakpoints */
+.home-links {
+  position: static;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.home-links ul {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  justify-items: start;
+}
+
+.home-links ul li {
+  background: rgba(24, 39, 26, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.home-links ul li:hover {
+  background: rgba(154, 226, 207, 0.2);
+  transform: scale(1.1);
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  transition: all 0.3s ease-out 0s;
+}
+
+/* Hide text labels for all breakpoints */
+.home-link-text {
+  display: none;
+}
+
+/* Top navigation: 3 icons */
+.home-links-top ul {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Bottom navigation: 4 icons */
+.home-links-bottom ul {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive icon sizes - Extra Large screens (1400px+) */
+@media (min-width: 1400px) {
+  .home-links ul li {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .home-link {
+    font-size: 2rem;
+  }
+  
+  .home-links ul {
+    gap: 24px;
+    max-width: 400px;
+  }
+  
+  .home-links-bottom ul {
+    max-width: 520px;
+  }
+}
+
+/* Large screens (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .home-links ul li {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .home-link {
+    font-size: 1.8rem;
+  }
+  
+  .home-links ul {
+    gap: 22px;
+    max-width: 350px;
+  }
+  
+  .home-links-bottom ul {
+    max-width: 460px;
+  }
+}
+
+/* Medium screens (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home-links ul li {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .home-link {
+    font-size: 1.6rem;
+  }
+  
+  .home-links ul {
+    gap: 20px;
+    max-width: 320px;
+  }
+  
+  .home-links-bottom ul {
+    max-width: 420px;
+  }
+}
+
+/* Small screens (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .home-links ul li {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .home-link {
+    font-size: 1.4rem;
+  }
+  
+  .home-links ul {
+    gap: 18px;
+    max-width: 280px;
+  }
+  
+  .home-links-bottom ul {
+    max-width: 370px;
+  }
+}
+
+/* Mobile screens (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .home-links ul li {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .home-link {
+    font-size: 1.2rem;
+  }
+  
+  .home-links ul {
+    gap: 16px;
+    max-width: 240px;
+  }
+  
+  .home-links-bottom ul {
+    max-width: 320px;
+  }
+}
+
+/* Small mobile screens (≤480px) */
+@media (max-width: 480px) {
+  .home-links ul li {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .home-link {
+    font-size: 1rem;
+  }
+  
+  .home-links ul {
+    gap: 14px;
+    max-width: 210px;
+  }
+  
+  .home-links-bottom ul {
+    max-width: 280px;
+  }
+}
+
+/* Sidebar navigation for other pages */
+.sidebar-nav {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.sidebar-nav ul li {
+  background: rgba(24, 39, 26, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav ul li:hover {
+  background: rgba(154, 226, 207, 0.2);
+  transform: scale(1.1);
+}
+
+.sidebar-nav .home-link {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  transition: all 0.3s ease-out 0s;
+}
+
+/* Responsive sidebar navigation sizes */
+/* Extra Large screens (1400px+) */
+@media (min-width: 1400px) {
+  .sidebar-nav ul li {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .sidebar-nav .home-link {
+    font-size: 1.8rem;
+  }
+  
+  .sidebar-nav ul {
+    gap: 20px;
+  }
+}
+
+/* Large screens (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .sidebar-nav ul li {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .sidebar-nav .home-link {
+    font-size: 1.6rem;
+  }
+  
+  .sidebar-nav ul {
+    gap: 18px;
+  }
+}
+
+/* Medium screens (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sidebar-nav ul li {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .sidebar-nav .home-link {
+    font-size: 1.4rem;
+  }
+  
+  .sidebar-nav ul {
+    gap: 16px;
+  }
+}
+
+/* Small screens (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar-nav ul li {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .sidebar-nav .home-link {
+    font-size: 1.2rem;
+  }
+  
+  .sidebar-nav ul {
+    gap: 14px;
+  }
+}
+
+/* Mobile screens (≤767px) - Hide sidebar, use regular navbar */
+@media (max-width: 767px) {
+  .sidebar-nav {
+    display: none;
+  }
+}
+
+.typewrap {
+  position: relative;
+  padding-top: 40px;         /* your desired spacing above the line */
+}
+
+/* Ghost line: same metrics as the live type to lock height */
+.typewrap::after {
+  content: "computer engineer";   /* longest phrase */
+  display: block;
+  visibility: hidden;
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 2.2em;
+  line-height: 1.25;
+}
+
+/* Live typing sits on top, doesn't change layout height */
+.typewriter {
+  position: absolute;
+  left: 0;
+  top: 40px;                 /* align with .typewrap's padding-top */
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 2.2em;
+  line-height: 1.25;
+  color: #fff;
+}
+
+/* Hide typewriter cursor globally - all breakpoints */
+.typewriter-cursor,
+.Typewriter__cursor,
+.typewriter::after,
+.Typewriter::after {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
 .main-name {
   color: #fff;
-}
-
-.Typewriter__wrapper {
-  font-size: 2.2em !important;
-  color: #fff !important;
-  font-weight: 300 !important;
-}
-.Typewriter__cursor {
-  font-size: 2.4em !important;
-  color: #fff !important;
-}
-
-@media (max-width: 767px) {
-  .Typewriter__wrapper {
-    font-size: 1.4em !important;
-    font-weight: 500 !important;
-    position: absolute !important;
-  }
-  .Typewriter__cursor {
-    display: none !important;
-  }
-}
-
-.myAvtar {
-  justify-content: center !important;
-  padding-top: 9em !important;
-}
-
-@media (max-width: 767px) {
-  .myAvtar {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
-  }
 }
 
 .home-about-section {
@@ -1230,4 +1564,23 @@ button:focus {
     max-width: 90%; /* Books take up more width on small screens */
   }
 
+  @media (max-width: 767px) {
+    .typewrap::after,
+    .typewriter {
+    font-size: 1.4em;        /* keep ghost + live in sync */
+    line-height: 1.25;
+    top: 40px;
+  }
+  }
+  
+  /* Hide typewriter cursor globally */
+  .typewriter-cursor,
+  .Typewriter__cursor,
+  .typewriter::after,
+  .Typewriter::after {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+ 
 }
