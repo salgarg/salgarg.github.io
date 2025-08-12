@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import SidebarNav from "../SidebarNav";
+import LazyImage from "../LazyImage";
+import { useProgressiveLoading } from "../../hooks/useProgressiveLoading";
 
 function Photography() {
   const [photos, setPhotos] = useState([]);
@@ -32,23 +34,42 @@ function Photography() {
     setPhotos(shuffledPhotos);
   }, []);
 
+  const { visibleImages, hasMore, sentinelRef } = useProgressiveLoading(photos, 8);
+
   return (
     <>
       <SidebarNav />
       <Container fluid className="photography-container">
-      <div className="photo-grid">
-        {photos.map(([, src], index) => (
-          <div key={index} className="photo-item">
-            <img 
-              src={src.default || src} 
-              alt={`Photography ${index + 1}`}
-              className="photo-image"
-              loading="lazy"
-            />
-          </div>
-        ))}
-      </div>
-    </Container>
+        <div className="photo-grid">
+          {visibleImages.map(([, src], index) => (
+            <div key={index} className="photo-item">
+              <LazyImage 
+                src={src.default || src} 
+                alt={`Photography ${index + 1}`}
+                className="photo-image"
+              />
+            </div>
+          ))}
+          {hasMore && (
+            <div 
+              ref={sentinelRef} 
+              style={{ 
+                height: '20px', 
+                width: '100%', 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center',
+                color: 'white',
+                fontSize: '0.9em',
+                opacity: 0.7,
+                gridColumn: '1 / -1'
+              }}
+            >
+              Loading more photos...
+            </div>
+          )}
+        </div>
+      </Container>
     </>
   );
 }
