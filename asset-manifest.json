@@ -1,16 +1,30 @@
 {
   "files": {
     "main.css": "/static/css/main.3439a3ce.css",
-    "main.js": "/static/js/main.0a1eb5b5.js",
+    "main.js": "/static/js/main.e039f318.js",
+    "static/media/IMG_3824.JPG": "/static/media/IMG_3824.0d49ae1156f365a84c15.JPG",
+    "static/media/IMG_3826.jpg": "/static/media/IMG_3826.7ce60aca03916cd67a5a.jpg",
+    "static/media/IMG_3825.jpg": "/static/media/IMG_3825.70048e1769348fba0391.jpg",
+    "static/media/IMG_3811.jpg": "/static/media/IMG_3811.56a218626c8f9acab9f5.jpg",
+    "static/media/DSC00109.JPG": "/static/media/DSC00109.3f2908ca524af3116d03.JPG",
+    "static/media/DSC01700.JPG": "/static/media/DSC01700.bc7aa2ac4051577c630b.JPG",
+    "static/media/DSC01145.JPG": "/static/media/DSC01145.a4c73394d9aea3a2cd70.JPG",
+    "static/media/DSC00098.JPG": "/static/media/DSC00098.42d09877e24899f89303.JPG",
     "static/media/alaska2.JPG": "/static/media/alaska2.02152508fa26d31fb879.JPG",
     "static/media/alaska3.JPG": "/static/media/alaska3.6adedad0481e6e446721.JPG",
+    "static/media/DSC00884.JPG": "/static/media/DSC00884.581b82c1d8638b3187fb.JPG",
     "static/media/homebg3.JPG": "/static/media/homebg3.e57e28b3972b5d3034cb.JPG",
     "static/media/alaska5.jpg": "/static/media/alaska5.2fe3a63a995d24007b5e.jpg",
     "static/media/alaska1.JPG": "/static/media/alaska1.95a5d0dc7eb3a9129250.JPG",
     "static/media/alaska4.JPG": "/static/media/alaska4.21d8112c063ee5e8d643.JPG",
     "static/media/india3.JPG": "/static/media/india3.3b43f1a644cf8ca25aaa.JPG",
+    "static/media/DSC01478.JPG": "/static/media/DSC01478.f462ba006f680bc4d1e5.JPG",
+    "static/media/DSC00781.JPG": "/static/media/DSC00781.123c6a1601810dadfaad.JPG",
+    "static/media/DSC01498.JPG": "/static/media/DSC01498.766e0f29ea1c9361f594.JPG",
     "static/media/DSC01194.JPG": "/static/media/DSC01194.b9adc02e0ccc47246e74.JPG",
+    "static/media/DSC01799.JPG": "/static/media/DSC01799.4f5a3a7b0daf4b779a2e.JPG",
     "static/media/DSC01546.JPG": "/static/media/DSC01546.de8c4a7fdd1d99ffe1b0.JPG",
+    "static/media/DSC01284.JPG": "/static/media/DSC01284.237a9b702985c8f16cbe.JPG",
     "static/media/DSC00851.JPG": "/static/media/DSC00851.c5c7cde3e50a03013ac4.JPG",
     "static/media/DSC00889 (1).JPG": "/static/media/DSC00889 (1).273b62f142967ef5158d.JPG",
     "static/media/IMG_0205.PNG": "/static/media/IMG_0205.73656080e45c134077b7.PNG",
@@ -22,9 +36,14 @@
     "static/media/IMG_0216.PNG": "/static/media/IMG_0216.b4adfda8c1e6e99a5983.PNG",
     "static/media/IMG_0203.PNG": "/static/media/IMG_0203.0d61d0afdf01429be938.PNG",
     "static/media/india1.JPG": "/static/media/india1.e5aee95fe4c2ee4bd656.JPG",
+    "static/media/IMG_4990.JPG": "/static/media/IMG_4990.38077e4eef114973e540.JPG",
+    "static/media/IMG_7336.jpg": "/static/media/IMG_7336.bb30ea3f998904ce2fdf.jpg",
+    "static/media/IMG_5031.JPG": "/static/media/IMG_5031.83595cb8503f4ce72d06.JPG",
     "static/media/IMG_0204.PNG": "/static/media/IMG_0204.e051eb8c8500aa09aee8.PNG",
+    "static/media/IMG_5041.JPG": "/static/media/IMG_5041.b6c4e8582ade0e8925a6.JPG",
     "static/media/IMG_0206.PNG": "/static/media/IMG_0206.6622dc3d7012629e27f5.PNG",
     "static/media/IMG_0208.PNG": "/static/media/IMG_0208.861980cb3a13f40e2c7e.PNG",
+    "static/media/IMG_5039 2.JPG": "/static/media/IMG_5039 2.63dd389a67c8713a9c51.JPG",
     "static/media/IMG_0219.PNG": "/static/media/IMG_0219.f31a8093400f3226dcb5.PNG",
     "static/media/IMG_0198.PNG": "/static/media/IMG_0198.db98d6ad6cc3096c92bc.PNG",
     "static/media/IMG_0199.PNG": "/static/media/IMG_0199.24981606deddaf302588.PNG",
@@ -35,10 +54,10 @@
     "static/media/pre.svg": "/static/media/pre.1ccd5aeb893d3dbc636c.svg",
     "index.html": "/index.html",
     "main.3439a3ce.css.map": "/static/css/main.3439a3ce.css.map",
-    "main.0a1eb5b5.js.map": "/static/js/main.0a1eb5b5.js.map"
+    "main.e039f318.js.map": "/static/js/main.e039f318.js.map"
   },
   "entrypoints": [
     "static/css/main.3439a3ce.css",
-    "static/js/main.0a1eb5b5.js"
+    "static/js/main.e039f318.js"
   ]
 }
