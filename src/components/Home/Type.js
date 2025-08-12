@@ -8,8 +8,7 @@ function Type() {
         strings: [
           "product manager",
           "computer engineer",
-          "creative",
-          "photographer"
+          "creative"
         ],
         autoStart: true,
         loop: true,

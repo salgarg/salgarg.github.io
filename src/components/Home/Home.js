@@ -73,7 +73,7 @@ function Home() {
               {/* Main content */}
               <Col md={12} className="home-header">
                 <h1 style={{ paddingBottom: 15 }} className="heading">
-                  hi there!{" "}
+                  hello!{" "}
                   <span className="wave" role="img" aria-labelledby="wave">
                     👋🏻
                   </span>

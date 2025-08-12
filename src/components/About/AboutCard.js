@@ -7,6 +7,7 @@ import {
   AiOutlineFormatPainter,
   AiOutlineCoffee,
 } from "react-icons/ai";
+import { TbBallFootball, TbSoccerField } from "react-icons/tb";
 
 function AboutCard() {
   return (
@@ -28,6 +29,9 @@ function AboutCard() {
             </li>
             <li className="about-activity">
               <AiOutlineCoffee /> coffee
+            </li>
+            <li className="about-activity">
+              <TbBallFootball /> playing soccer
             </li>
             <li className="about-activity">
               <AiOutlineHome /> trying new restaurants
