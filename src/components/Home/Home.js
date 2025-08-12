@@ -26,7 +26,8 @@ function Home() {
           fontWeight: 700,
           letterSpacing: "0.08em",
           zIndex: 1000,
-          color: "white"
+          color: "white",
+          fontSize: 25
         }}
       >
         SG

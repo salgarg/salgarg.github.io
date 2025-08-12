@@ -601,75 +601,102 @@ button:focus {
   transition: all 0.3s ease-out 0s;
 }
 
-/* Responsive sidebar navigation sizes */
-/* Extra Large screens (1400px+) */
-@media (min-width: 1400px) {
-  .sidebar-nav ul li {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .sidebar-nav .home-link {
-    font-size: 1.8rem;
-  }
-  
-  .sidebar-nav ul {
-    gap: 20px;
-  }
+.sidebar-nav {
+  position: fixed;
+  top: 50%;
+  right: clamp(12px, 2vw, 32px);
+  transform: translateY(-50%);
+  z-index: 1000;
+
+  /* tune these in one place */
+  --icon: clamp(40px, 6vw, 72px); /* circle size */
+  --gap:  clamp(10px, 1.2vw, 20px); /* space between circles */
 }
 
-/* Large screens (1200px - 1399px) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .sidebar-nav ul li {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .sidebar-nav .home-link {
-    font-size: 1.6rem;
-  }
-  
-  .sidebar-nav ul {
-    gap: 18px;
-  }
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--gap);
+  align-items: center;
+  justify-items: center;
 }
 
-/* Medium screens (992px - 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .sidebar-nav ul li {
-    width: 55px;
-    height: 55px;
-  }
-  
-  .sidebar-nav .home-link {
-    font-size: 1.4rem;
-  }
-  
-  .sidebar-nav ul {
-    gap: 16px;
-  }
+.sidebar-nav ul li {
+  inline-size: var(--icon);
+  block-size: var(--icon);
+  border-radius: 50%;
+  background: rgba(24, 39, 26, 0.9);
+  display: grid;           /* perfect centering */
+  place-items: center;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-/* Small screens (768px - 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .sidebar-nav ul li {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .sidebar-nav .home-link {
-    font-size: 1.2rem;
-  }
-  
-  .sidebar-nav ul {
-    gap: 14px;
-  }
+.sidebar-nav ul li:hover {
+  background: rgba(154, 226, 207, 0.2);
+  transform: scale(1.06);
 }
 
-/* Mobile screens (≤767px) - Hide sidebar, use regular navbar */
-@media (max-width: 767px) {
+.sidebar-nav .home-link {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  line-height: 1;
+  font-size: calc(var(--icon) * 0.52); /* react-icons size follows circle */
+}
+
+@media (max-width: 767.98px) {
   .sidebar-nav {
-    display: none;
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: none;
+
+    /* smaller, denser dock */
+    --icon: clamp(40px, 8vw, 52px);
+    --gap: clamp(8px, 2.5vw, 14px);
+
+    display: grid;
+    place-items: center;
+    padding: 10px clamp(12px, 3vw, 24px);
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    background: rgba(24, 39, 26, 0.8);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(154, 226, 207, 0.2);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -6px 20px rgba(0,0,0,.25);
+  }
+
+  .sidebar-nav ul {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    justify-content: center;
+    gap: var(--gap);
+  }
+
+  .sidebar-nav ul li {
+    inline-size: var(--icon);
+    block-size: var(--icon);
+    background: rgba(24, 39, 26, 0.92);
+  }
+}
+
+/* Give pages with the dock some breathing room so content isn't hidden under it */
+@media (max-width: 767.98px) {
+  .project-section,
+  .about-section,
+  .resume-section {
+    padding-bottom: calc(24px + var(--icon));
+    /* For iOS safe areas, add an overriding line in supporting browsers: */
+    padding-bottom: calc(24px + var(--icon) + env(safe-area-inset-bottom));
   }
 }
 
@@ -709,6 +736,28 @@ button:focus {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {/* Hide typewriter cursor globally */
+  .typewriter-cursor,
+  .Typewriter__cursor,
+  .typewriter::after,
+  .Typewriter::after {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+ 
+}
+
+@media (max-width: 767px) {
+  .typewrap::after,
+  .typewriter {
+  font-size: 1.4em;        /* keep ghost + live in sync */
+  line-height: 1.25;
+  top: 40px;
+}
 }
 
 .main-name {
@@ -800,32 +849,32 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: #151e17;
+  background-color: #001b06;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
 }
 .footer-copywright {
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .footer-body {
   z-index: 1;
-  text-align: center !important;
+  text-align: left !important;
 }
 
 @media (max-width: 767px) {
   .footer-copywright {
-    text-align: center !important;
+    text-align: left !important;
   }
 
   .footer-body {
-    text-align: center !important;
+    text-align: left !important;
   }
 }
 
 .footer h3 {
-  font-size: 1em;
+  font-size: 0.5em;
   color: white !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -1468,31 +1517,6 @@ button:focus {
   width: 100%; /* Ensure full width */
 }
 
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .coming-soon-title {
-    font-size: 1.5rem; /* Smaller font size for mobile */
-    margin-bottom: 20px; /* Reduced margin for mobile */
-  }
-
-  .swiper-slide {
-    height: 200px; /* Smaller images on mobile */
-  }
-}
-
-/* Desktop Styles */
-@media (min-width: 769px) {
-  .coming-soon-title {
-    font-size: 2.5rem; /* Larger font size for desktops */
-    margin-bottom: 30px; /* Adjust space for larger screens */
-  }
-
-  .swiper-slide {
-    height: 400px; /* Larger images on desktop */
-  }
-}
-
 /* --------- */
 /* Bookshelf */
 /* --------- */
@@ -1510,30 +1534,28 @@ button:focus {
   box-sizing: border-box;
 }
 
-/* Book row layout */
 .bookshelf .book-row {
   display: flex;
-  justify-content: center; /* Center the books horizontally */
-  gap: 30px; /* Add space between books */
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  max-width: 1200px; /* Set a max-width to prevent stretching on larger screens */
-  width: 100%; /* Take up the full width */
-  margin-top: 20px; /* Add space above the row */
+  justify-content: center;
+  gap: clamp(12px, 3vw, 30px);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 20px;
 }
 
-/* Each book container */
 .bookshelf .book {
   display: flex;
-  flex-direction: column; /* Stack title and image vertically */
-  align-items: center; /* Center the title and image */
-  max-width: 250px; /* Limit the width of each book */
-  flex: 1 1 auto; /* Allow flexible growth and shrinkage */
-  margin-bottom: 20px; /* Add space at the bottom */
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 250px;
+  max-width: 250px;
+  margin-bottom: 20px;
 }
 
 .bookshelf .book img {
   width: 100%; /* Make the image take up full width of the container */
-  height: 100%; /* Maintain the aspect ratio */
+  height: auto; /* Maintain the aspect ratio */
   border-radius: 8px; /* Optional: rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow effect */
 }
@@ -1551,36 +1573,37 @@ button:focus {
   text-transform: uppercase;
   }
 
-/* Responsive design */
+  /* Mobile: keep items horizontal, shrink, and allow swipe */
 @media (max-width: 768px) {
-  /* Stack books vertically on smaller screens */
+  .bookshelf {
+    padding: 16px;
+  }
+
   .bookshelf .book-row {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap;            /* stay in one line */
+    justify-content: flex-start;  /* align left, not centered off-screen */
+    overflow-x: auto;             /* horizontal scroll */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;          /* room for scrollbar/thumb */
   }
 
-  /* Adjust width of each book container */
   .bookshelf .book {
-    max-width: 90%; /* Books take up more width on small screens */
+    /* width per item on mobile; tweak to taste */
+    flex: 0 0 clamp(120px, 38vw, 180px);
+    max-width: none;
+    margin-bottom: 0;
   }
 
-  @media (max-width: 767px) {
-    .typewrap::after,
-    .typewriter {
-    font-size: 1.4em;        /* keep ghost + live in sync */
-    line-height: 1.25;
-    top: 40px;
+  .bookshelf .book h3 {
+    font-size: clamp(0.85rem, 2.4vw, 1rem);
+    text-align: center;
   }
+
+  /* Optional: slimmer horizontal scrollbar */
+  .bookshelf .book-row::-webkit-scrollbar { height: 6px; }
+  .bookshelf .book-row::-webkit-scrollbar-thumb {
+    background: rgba(140, 186, 139, 0.35);
+    border-radius: 3px;
   }
-  
-  /* Hide typewriter cursor globally */
-  .typewriter-cursor,
-  .Typewriter__cursor,
-  .typewriter::after,
-  .Typewriter::after {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
- 
 }
+
