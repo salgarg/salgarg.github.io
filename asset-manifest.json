@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dcc202fe.css",
-    "main.js": "/static/js/main.c658117e.js",
+    "main.css": "/static/css/main.d3285e62.css",
+    "main.js": "/static/js/main.e64c70e7.js",
     "static/media/alaska2.JPG": "/static/media/alaska2.02152508fa26d31fb879.JPG",
     "static/media/alaska3.JPG": "/static/media/alaska3.6adedad0481e6e446721.JPG",
     "static/media/homebg3.JPG": "/static/media/homebg3.e57e28b3972b5d3034cb.JPG",
@@ -12,7 +12,6 @@
     "static/media/DSC01194.JPG": "/static/media/DSC01194.b9adc02e0ccc47246e74.JPG",
     "static/media/DSC01546.JPG": "/static/media/DSC01546.de8c4a7fdd1d99ffe1b0.JPG",
     "static/media/DSC00851.JPG": "/static/media/DSC00851.c5c7cde3e50a03013ac4.JPG",
-    "static/media/profile.png": "/static/media/profile.f48008f66e6f1ea91ccc.png",
     "static/media/DSC00889 (1).JPG": "/static/media/DSC00889 (1).273b62f142967ef5158d.JPG",
     "static/media/IMG_0205.PNG": "/static/media/IMG_0205.73656080e45c134077b7.PNG",
     "static/media/india2.JPG": "/static/media/india2.6c353d8c3d69f402c645.JPG",
@@ -35,11 +34,11 @@
     "static/media/daisyjones.jpg": "/static/media/daisyjones.810b1c9d1189885488bc.jpg",
     "static/media/pre.svg": "/static/media/pre.1ccd5aeb893d3dbc636c.svg",
     "index.html": "/index.html",
-    "main.dcc202fe.css.map": "/static/css/main.dcc202fe.css.map",
-    "main.c658117e.js.map": "/static/js/main.c658117e.js.map"
+    "main.d3285e62.css.map": "/static/css/main.d3285e62.css.map",
+    "main.e64c70e7.js.map": "/static/js/main.e64c70e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcc202fe.css",
-    "static/js/main.c658117e.js"
+    "static/css/main.d3285e62.css",
+    "static/js/main.e64c70e7.js"
   ]
 }
