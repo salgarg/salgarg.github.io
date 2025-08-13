@@ -9,6 +9,7 @@ import Resume from "./components/Resume/ResumeNew";
 import Photography from "./components/Photography/Photography";
 import Bookshelf from "./components/Bookshelf";
 import DigitalArtGallery from "./components/DigitalArt/DigitalArtGallery";
+import Spotify from "./components/Spotify/Spotify";
 import {
   HashRouter as Router,
   Route,
@@ -44,6 +45,7 @@ function App() {
           <Route path="/photography" element={<Photography />} />
           <Route path="/bookshelf" element={<Bookshelf />} />
           <Route path="/digitalartgallery" element={<DigitalArtGallery />} />
+          <Route path="/spotify" element={<Spotify />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

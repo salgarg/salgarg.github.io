@@ -13,6 +13,7 @@ import {
   AiOutlineFormatPainter,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import { FaSpotify } from "react-icons/fa";
 
 function Home() {
   return (
@@ -61,6 +62,11 @@ function Home() {
                       <li>
                         <Link to="/resume" className="home-link">
                           <CgFileDocument />
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/spotify" className="home-link">
+                          <FaSpotify />
                         </Link>
                       </li>
                     </ul>

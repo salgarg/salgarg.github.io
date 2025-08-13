@@ -417,9 +417,9 @@ button:focus {
   display: none;
 }
 
-/* Top navigation: 3 icons */
+/* Top navigation: 4 icons */
 .home-links-top ul {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* Bottom navigation: 4 icons */
@@ -1424,6 +1424,196 @@ button:focus {
   text-align: center; /* Ensure title is centered */
   line-height: 1.5;
   padding: 10px;
+}
+
+/* --------- */
+/* Spotify */
+/* --------- */
+
+.spotify-section {
+  position: relative !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 150px !important;
+  padding-bottom: 150px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.spotify-login-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(143, 203, 158, 0.3) !important;
+  border-radius: 20px !important;
+  padding: 3rem !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+.spotify-icon {
+  color: #1DB954 !important;
+  margin-bottom: 1rem !important;
+}
+
+.spotify-login-btn {
+  background: #1DB954 !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 12px 30px !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.spotify-login-btn:hover {
+  background: #1ed760 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.4) !important;
+}
+
+.spotify-title {
+  color: white !important;
+  font-size: 2.3em !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.spotify-subtitle {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+.current-track-card {
+  background: rgba(29, 185, 84, 0.1) !important;
+  border: 1px solid rgba(29, 185, 84, 0.3) !important;
+  border-radius: 15px !important;
+  backdrop-filter: blur(10px) !important;
+  color: white !important;
+}
+
+.current-track-image {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 10px !important;
+  object-fit: cover !important;
+}
+
+.track-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(143, 203, 158, 0.2) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(5px) !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+.track-card:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(143, 203, 158, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.track-image {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 8px !important;
+  object-fit: cover !important;
+}
+
+.track-name {
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.track-artist {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.recent-tracks-grid {
+  display: grid !important;
+  gap: 1rem !important;
+}
+
+.status-indicator {
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.status-indicator.connected {
+  color: #1DB954 !important;
+}
+
+.status-indicator.disconnected {
+  color: #ff6b6b !important;
+}
+
+/* Responsive design for Spotify section */
+@media (max-width: 768px) {
+  .spotify-section {
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+  }
+  
+  .spotify-login-card {
+    padding: 2rem !important;
+    margin: 0 1rem !important;
+  }
+  
+  .spotify-title {
+    font-size: 1.8em !important;
+  }
+  
+  .current-track-image {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .track-image {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .track-name {
+    font-size: 0.9rem !important;
+  }
+  
+  .track-artist {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .spotify-login-card {
+    padding: 1.5rem !important;
+  }
+  
+  .current-track-card .d-flex {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .current-track-image {
+    margin-bottom: 1rem !important;
+  }
+  
+  .track-card .d-flex {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .track-image {
+    margin-bottom: 0.5rem !important;
+  }
 }
 
 /* --------- */
