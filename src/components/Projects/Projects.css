@@ -1,0 +1,25 @@
+.project-card-view {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card-view img {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  /* Center content vertically */
+  .project-card-view .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Keep buttons in a row */
+  .project-card-view .btn-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
