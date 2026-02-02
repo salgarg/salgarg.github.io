@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3439a3ce.css",
-    "main.js": "/static/js/main.e039f318.js",
+    "main.css": "/static/css/main.7a06c03b.css",
+    "main.js": "/static/js/main.5d834e86.js",
     "static/media/IMG_3824.JPG": "/static/media/IMG_3824.0d49ae1156f365a84c15.JPG",
     "static/media/IMG_3826.jpg": "/static/media/IMG_3826.7ce60aca03916cd67a5a.jpg",
     "static/media/IMG_3825.jpg": "/static/media/IMG_3825.70048e1769348fba0391.jpg",
@@ -48,16 +48,17 @@
     "static/media/IMG_0198.PNG": "/static/media/IMG_0198.db98d6ad6cc3096c92bc.PNG",
     "static/media/IMG_0199.PNG": "/static/media/IMG_0199.24981606deddaf302588.PNG",
     "static/media/SaloniGarg_Resume_0525_redacted.pdf": "/static/media/SaloniGarg_Resume_0525_redacted.78cd6308bf13fbe083fc.pdf",
+    "static/media/thumbnailjobmatcher.png": "/static/media/thumbnailjobmatcher.c8a0c6d4c4982a272036.png",
     "static/media/yellowface.jpg": "/static/media/yellowface.759939431ae99139b527.jpg",
     "static/media/exceptional.jpg": "/static/media/exceptional.9fa01381d431d2b9f71a.jpg",
     "static/media/daisyjones.jpg": "/static/media/daisyjones.810b1c9d1189885488bc.jpg",
     "static/media/pre.svg": "/static/media/pre.1ccd5aeb893d3dbc636c.svg",
     "index.html": "/index.html",
-    "main.3439a3ce.css.map": "/static/css/main.3439a3ce.css.map",
-    "main.e039f318.js.map": "/static/js/main.e039f318.js.map"
+    "main.7a06c03b.css.map": "/static/css/main.7a06c03b.css.map",
+    "main.5d834e86.js.map": "/static/js/main.5d834e86.js.map"
   },
   "entrypoints": [
-    "static/css/main.3439a3ce.css",
-    "static/js/main.e039f318.js"
+    "static/css/main.7a06c03b.css",
+    "static/js/main.5d834e86.js"
   ]
 }
