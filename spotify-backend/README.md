@@ -64,12 +64,27 @@ The server will run on `http://localhost:3001` by default.
 
 ## Deployment Options
 
-### Option 1: Railway
-1. Connect your GitHub repo to Railway
-2. Add environment variables in Railway dashboard
-3. Deploy automatically
+### Option 1: Render (recommended)
+1. In Render, create a new **Web Service** from this repository.
+2. Set **Root Directory** to `spotify-backend`.
+3. Set the build command to `npm install` and the start command to `npm start`.
+4. Add these environment variables in Render:
+   - `SPOTIFY_CLIENT_ID`
+   - `SPOTIFY_CLIENT_SECRET`
+   - `SPOTIFY_REFRESH_TOKEN`
+   - `FRONTEND_ORIGIN=https://salgarg.github.io`
+5. Deploy, then confirm `https://your-service.onrender.com/health` returns `status: healthy`.
+6. Add `REACT_APP_BACKEND_URL=https://your-service.onrender.com` to the frontend build environment and redeploy GitHub Pages.
 
-### Option 2: Vercel
+Render may sleep free services. The first request after inactivity can take a little longer.
+
+### Option 2: Railway
+1. Connect your GitHub repo to Railway
+2. Set the service root directory to `spotify-backend`
+3. Add environment variables in Railway dashboard
+4. Deploy automatically
+
+### Option 3: Vercel
 1. Install Vercel CLI: `npm i -g vercel`
 2. Run `vercel` in the backend directory
 3. Add environment variables via Vercel dashboard

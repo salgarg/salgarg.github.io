@@ -6,9 +6,13 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || 'http://localhost:3000';
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: FRONTEND_ORIGIN.split(',').map((origin) => origin.trim()),
+  methods: ['GET', 'POST'],
+}));
 app.use(express.json());
 
 // In-memory storage (use a database for production)
@@ -31,6 +35,10 @@ let tokenExpiry = null;
 
 // Function to get access token using refresh token
 async function refreshAccessToken() {
+  if (!SPOTIFY_CONFIG.clientId || !SPOTIFY_CONFIG.clientSecret || !SPOTIFY_CONFIG.refreshToken) {
+    throw new Error('Missing Spotify credentials. Set SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, and SPOTIFY_REFRESH_TOKEN.');
+  }
+
   try {
     const response = await axios.post('https://accounts.spotify.com/api/token', 
       new URLSearchParams({
@@ -170,8 +178,14 @@ app.post('/api/spotify/refresh', async (req, res) => {
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.json({ 
-    status: 'healthy',
+  const configured = Boolean(
+    SPOTIFY_CONFIG.clientId &&
+    SPOTIFY_CONFIG.clientSecret &&
+    SPOTIFY_CONFIG.refreshToken
+  );
+
+  res.status(configured ? 200 : 503).json({
+    status: configured ? 'healthy' : 'unconfigured',
     uptime: process.uptime(),
     timestamp: new Date().toISOString()
   });

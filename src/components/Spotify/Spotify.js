@@ -13,12 +13,14 @@ function Spotify() {
   const [backendConnected, setBackendConnected] = useState(false);
 
   useEffect(() => {
+    let mounted = true;
+
     const initializeSpotify = async () => {
       try {
-        // Check if backend is available
         const isHealthy = await spotifyApi.checkBackendHealth();
+        if (!mounted) return;
         setBackendConnected(isHealthy);
-        
+
         if (isHealthy) {
           await fetchSpotifyData();
         } else {
@@ -26,24 +28,23 @@ function Spotify() {
         }
       } catch (error) {
         console.error('Error initializing Spotify:', error);
-        setError('Failed to connect to Spotify service');
-        setBackendConnected(false);
+        if (mounted) {
+          setError('Failed to connect to Spotify service');
+          setBackendConnected(false);
+        }
       } finally {
-        setLoading(false);
+        if (mounted) setLoading(false);
       }
     };
 
     initializeSpotify();
-    
-    // Set up auto-refresh every 2 minutes
-    const interval = setInterval(() => {
-      if (backendConnected) {
-        fetchSpotifyData();
-      }
-    }, 120000); // 2 minutes
+    const interval = setInterval(() => fetchSpotifyData(), 120000);
 
-    return () => clearInterval(interval);
-  }, [backendConnected]);
+    return () => {
+      mounted = false;
+      clearInterval(interval);
+    };
+  }, []);
 
   const fetchSpotifyData = async () => {
     try {
